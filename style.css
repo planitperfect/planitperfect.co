@@ -146,7 +146,7 @@ ul{
 
   .contact form p input[type="text"],
   .contact form p input[type="date"] {
-    width: 150%;
+    width: 130%;
     margin-bottom: 10px;
   }
 }
