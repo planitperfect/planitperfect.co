@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 
+
+
+
 body{
   background:#330036;
   color:#485e74;
@@ -17,15 +20,15 @@ body{
   padding:1em;
 }
 
-ul{
-  list-style: none;
-  padding:0;
-}
-
-
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+ul{
+  list-style: none;
+  padding:0;
 }
 
 .brand{
@@ -123,3 +126,28 @@ img {
     text-align: left;
   }
 }
+
+/* CSS */
+@media only screen and (max-width: 600px) {
+  .contact form  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact form  p{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact form p label {
+    margin-bottom: 5px;
+  }
+
+  .contact form p input[type="text"],
+  .contact form p input[type="date"] {
+    width: 150%;
+    margin-bottom: 10px;
+  }
+}
+
