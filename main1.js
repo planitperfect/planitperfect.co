@@ -62,6 +62,6 @@ function saveMessage(name, company, event, phone,sd,ed){
     event:event,
     phone:phone,
     sd:sd,
-    ed,ed
+    ed:ed,
   });
 }
