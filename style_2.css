@@ -1,0 +1,148 @@
+/* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {  
+            font-family: Verdana;
+            text-align: center;
+    
+        }
+        
+        div#form {
+            color: 00000;
+            background-attachment: fixed;
+            background-image: url("logo (2).png");
+            background-blend-mode: overlay;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover; 
+            background-origin:content-box;
+            background-size: 500px 400px;                                  
+            min-height:100%;
+        
+        }               
+        .logo{
+            background-image: url("logo (2).png");
+        }
+       /* .heading-container{
+            height: 200px;
+            background-color: #1f013a ;
+            align-items:center ;
+            padding: 10px 20px;
+            display: flex ;
+            justify-content: space-between;
+        }*/
+        .heading-container {
+            background-color: #1f013a;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* Vertically center the content */
+        }
+        .heading{
+            width: 100%;
+            height: 100px;
+            background-color: #1f013a ;
+            color: white;
+            text-align: center;
+            padding-top: 100px;     
+            
+        }
+        .head-logo {
+            width: 200px; /* Adjust the width of the container */
+            height: 200px; /* Adjust the height of the container */
+            background-color: #1f013a; /* Background color for the circular container */
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: 50%; /* Make the container circular */
+            overflow: hidden; 
+            float: right;
+            margin-top: -50px;
+        }
+        .circular-logo {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 50%; /* Make the logo image circular */
+        }
+        .logo-mask {
+            width: 100%;
+            height: 100%;
+            clip-path: circle(50%); /* Create a circular mask for the logo */
+        }
+        .head-logo img {
+            max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+            max-height: 100%; /* Ensure the image doesn't exceed its container's height */
+        }
+        
+        
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #ffffffb3;           
+            max-width: 1000px ;
+            margin: 50px auto;
+            padding: 30px 20px;
+            
+        }
+       
+ 
+        /* Styling form-control Class */
+        .form-control {
+            text-align: left;
+            margin-bottom: 25px;
+            
+        }
+ 
+        /* Styling form-control Label */
+        .form-control label {
+            display: inline;
+            margin-bottom: 10px;
+            
+        }
+ 
+        /* Styling form-control input,
+        select, textarea */
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            display: block;
+            width: 95%;
+        }
+ 
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+ /* Rest of your CSS */
+
+.agreement-box {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.agreement-box input[type="checkbox"] {
+    margin-right: 5px; /* Adjust the spacing between checkbox and label */
+   
+}
+
+/* Rest of your CSS */
+
+        /* Styling Button */
+        button {
+            background-color: #05c46b;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
