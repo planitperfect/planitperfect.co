@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Firebase App</title>
+    <style>
+
+
+      table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+td {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: medium;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>Event Dates</h1>
+    
+    <!-- <div>
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date">
+      <button id="filter-btn">Filter</button>
+      <button id="reset-btn">Reset</button>
+    </div> -->
+    <h1>Vendor</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Number</th>
+        <th>Email</th>
+        <th>Type Of Service</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+      <tbody id="table-body">
+      </tbody>
+    </table>
+    <div>
+
+
+    </div>
+    <!-- <h1>Available</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Event</th>
+        <th>Phone</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+      <tbody id="table-body1">
+      </tbody>
+    </table> -->
+    
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    <script>
+      // Initialize Firebase
+    const firebaseConfig = {
+    apiKey: "AIzaSyDPBn8-Col7JnBpd0e_NZdA2LDdmUdZuu0",
+    authDomain: "pip-vendor-registration.firebaseapp.com",
+    databaseURL: "https://pip-vendor-registration-default-rtdb.firebaseio.com",
+    projectId: "pip-vendor-registration",
+    storageBucket: "pip-vendor-registration.appspot.com",
+    messagingSenderId: "863382387895",
+    appId: "1:863382387895:web:a7452057e070434839a132",
+    measurementId: "G-JK3KXSM9YM"
+  };
+
+firebase.initializeApp(firebaseConfig);
+
+// Reference messages collection
+var messagesRef = firebase.database().ref('messages_1');
+
+// Store data in array
+var messagesArr = [];
+messagesRef.once('value', function(snapshot) {
+  snapshot.forEach(function(childSnapshot) {
+    var childData = childSnapshot.val();
+    var message = {
+      name: childData.name,
+      company: childData.companyName,
+      number: childData.number,
+      email: childData.email,
+      price: childData.price,
+      typeOfService: childData.typeOfService,
+      description:childData.description
+    };
+    messagesArr.push(message);
+  });
+  displayData(messagesArr,[]);
+});
+
+// Display data in table
+var tableBody = document.getElementById('table-body');
+// var tableBody1 = document.getElementById('table-body1');
+function displayData(data,data1) {
+  tableBody.innerHTML = '';
+  // tableBody1.innerHTML = '';
+  data.forEach(function(message) {
+    var row = document.createElement('tr');
+    row.innerHTML = '<td>' + message.name + '</td>' +
+                    '<td>' + message.company + '</td>' +
+                    '<td>' + message.number + '</td>' +
+                    '<td>' + message.email + '</td>' +
+                    '<td>' + message.typeOfService + '</td>' +
+                    '<td>' + message.price + '</td>'+
+                    '<td>' + message.description + '</td>';
+    tableBody.appendChild(row);
+    
+    
+  });
+  // data1.forEach(function(message1) {
+  //   var row1 = document.createElement('tr');
+  //   row1.innerHTML = '<td>' + message1.name + '</td>' +
+  //                   '<td>' + message1.company + '</td>' +
+  //                   '<td>' + message1.event + '</td>' +
+  //                   '<td>' + message1.phone + '</td>' +
+  //                   '<td>' + message1.sd + '</td>' +
+  //                   '<td>' + message1.ed + '</td>';
+  //   tableBody1.appendChild(row1);
+    
+    
+  // });
+}
+
+// Display all data on page load
+displayData(messagesArr,[]);
+
+// // Filter data by date range
+// var filterBtn = document.getElementById('filter-btn');
+// filterBtn.addEventListener('click', function() {
+//   var startDate = document.getElementById('start-date').value;
+  
+//   var filteredData = messagesArr.filter(function(message) {
+//     return message.sd === startDate;
+//   });
+
+//   var filteredData1 = messagesArr.filter(function(message1) {
+//     return message1.sd !== startDate;
+//   });
+
+//   displayData(filteredData,filteredData1);
+  
+// });
+
+// Reset table data
+// var resetBtn = document.getElementById('reset-btn');
+// resetBtn.addEventListener('click', function() {
+//   displayData(messagesArr,[]);
+// });
+
+      </script>
+    </body>
+      </html>
