@@ -82,6 +82,7 @@ function submitForm(e){
 
   // Clear form
  // document.getElementById('form').reset();
+     window.location.href = "thankyou.html";
 }
 
 // Function to get get form values
