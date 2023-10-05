@@ -5,50 +5,49 @@
             text-align: center;
     
         }
+
+        .terms {
+            /* font-size: 20px; */
+            text-align: center;
+        }
         
         div#form {
-            color: 00000;
+            /* color: #00000; */
             background-attachment: fixed;
-            background-image: url("logo (2).png");
+            background-image: url(logo.png);
+            background-blend-mode: overlay;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* -webkit-background-size: cover;  */
+            background-origin:content-box;
+            background-size: 500px 400px;                                  
+          min-height:100%;
+        
+        }               
+        .logo{
+            background: url(logo.png);    
+            background-attachment: fixed;
             background-blend-mode: overlay;
             background-position: center;
             background-repeat: no-repeat;
             -webkit-background-size: cover; 
-            background-origin:content-box;
+            
             background-size: 500px 400px;                                  
-            min-height:100%;
-        
-        }               
-        .logo{
-            background-image: url("logo (2).png");
+          min-height:100%;      
         }
 
-        @media screen and (max-width: 599px) {
-            .contact form {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-            }
-            .contact form label {
-                margin-bottom: 10px;
-                text-align: center;
-              }
-            
-              .contact form input,
-              .contact form textarea {
-                width: 100%;
-                padding: 1em;
-                border: 1px solid #c9e6ff;
-                margin-bottom: 10px;
-              }
-            
-              .contact form .full {
-                grid-column: 1 / 3;
-              }
-            
-              .contact form button {
-                width: 100%;
-              }
+        .form-with-background {
+            background-image: url(logo.png);
+            background-attachment: fixed;
+            background-blend-mode: overlay;
+            background-position: center;
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            background-size: 500px 400px;
+            min-height: 100%;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
         }
        /* .heading-container{
             height: 200px;
@@ -62,14 +61,12 @@
             background-color: #1f013a;
             color: white;
             padding: 10px 20px;
-            position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center; /* Vertically center the content */
         }
         .heading{
             width: 100%;
-            margin-top: -10px;
             height: 100px;
             background-color: #1f013a ;
             color: white;
@@ -89,21 +86,6 @@
             float: right;
             margin-top: -50px;
         }
-        @media screen and (max-width: 599px) {
-            .example{
-                /* padding-top: 100% */
-            }
-            h1.heading{
-                padding-top: 30px;
-                /* width: 100%;
-                height: 100px;
-                background-color: #1f013a ;
-                color: white; */
-                /* text-align: center; */
-                /* padding-top: 100px;      */
-                
-            }
-        }
         .circular-logo {
             max-width: 100%;
             max-height: 100%;
@@ -122,7 +104,7 @@
         
         /* Styling the Form (Color, Padding, Shadow) */
         form {
-            background-color: #ffffffb3;           
+            background-color: #ffffffb3;   
             max-width: 1000px ;
             margin: 50px auto;
             padding: 30px 20px;
@@ -182,13 +164,56 @@
         /* Styling Button */
         button {
             background-color: #1f013a;
-            border: 1px solid #777;
+            border: 1px solid;
             color: #ffffff;
             border-radius: 2px;
-            font-family: inherit;
+            font-family:'Times New Roman', Times, serif;
             font-size: 21px;
             display: block;
             width: 100%;
             margin-top: 50px;
             margin-bottom: 20px;
         }
+
+    /* Media query for screens smaller than 768px (typical mobile screens) */
+    @media (max-width: 768px) {
+        .heading {
+            font-size: 20px;
+        }
+        .terms {
+            font-size: 20px;
+            text-align: center;
+        }
+        .head-logo {
+            width: 100px; /* Adjust the width of the container */
+            height: 100px; /* Adjust the height of the container */
+            /* background-color: #1f013a; Background color for the circular container */
+            /* display: flex;
+            justify-content: flex-end; */
+            align-items: center;
+            border-radius: 50%; /* Make the container circular */
+            overflow: hidden; 
+            /* float: right; */
+            margin-top: -125px;
+            /* margin-right:100px ; */
+        }
+        .circular-logo {
+            width: 100px;
+            height: 100px;
+        }
+        label {
+            font-size: 16px;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            font-size: 14px;
+            width: 100%;
+        }
+        button[type="submit"] {
+            font-size: 16px;
+        }
+        .agreement-box {
+            font-size: 14px;
+        }
+    }
