@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const agreeCheckbox = document.getElementById('agree-checkbox');
-    const form = document.querySelector('form');
+    const form = document.querySelector('.logo');
 
     form.addEventListener('submit', function (event) {
         if (!agreeCheckbox.checked) {
@@ -82,7 +82,7 @@ function submitForm(e){
 
   // Clear form
  // document.getElementById('form').reset();
-     window.location.href = "thankyou.html";
+ window.location.href = "thankyou.html";
 }
 
 // Function to get get form values
