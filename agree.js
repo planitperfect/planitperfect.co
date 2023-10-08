@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const agreeCheckbox = document.getElementById('agree-checkbox');
-    const form = document.querySelector('.logo');
+    const form = document.querySelector('form');
 
     form.addEventListener('submit', function (event) {
         if (!agreeCheckbox.checked) {
@@ -60,7 +60,7 @@ function submitForm(e){
     var company = getInputVal('company');
     var number = getInputVal('number');
     var email = getInputVal('email');
-    var type_of_service = getInputVal('type_of_service');
+    var type_of_service = getInputVal('type of service');
     var price = getInputVal('price');
     var description = getInputVal('description');
     
